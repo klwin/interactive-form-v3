@@ -44,12 +44,15 @@ designSelectElement.addEventListener('change', (e) => {
     let selectOptions = colorSelectElement.children;
     for (element of selectOptions){
         element.setAttribute('hidden','');
+        element.removeAttribute('selected');
     }
     if (e.target.value == 'js puns') {
+        colorSelectElement[1].setAttribute('selected','');
         colorSelectElement[1].removeAttribute('hidden');
         colorSelectElement[2].removeAttribute('hidden');
         colorSelectElement[3].removeAttribute('hidden');
     } else {
+        colorSelectElement[4].setAttribute('selected','');
         colorSelectElement[4].removeAttribute('hidden');
         colorSelectElement[5].removeAttribute('hidden');
         colorSelectElement[6].removeAttribute('hidden');
